@@ -15,5 +15,10 @@ export default defineConfig({
   vite: {
     envDir: ".",
     envPrefix: ["VITE_", "WEB3FORMS_", "CONTACT_", "RESEND_"],
+    build: {
+      rollupOptions: {
+        external: ['fsevents'],
+      },
+    },
   },
 });
