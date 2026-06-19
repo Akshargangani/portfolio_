@@ -1,16 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Projects } from "@/components/Projects";
 
-export const Route = createFileRoute("/work")({
-  head: () => ({
-    meta: [
-      { title: "Work — Akshar Studio" },
-      { name: "description", content: "Selected projects across product, brand and immersive web by Akshar." },
-      { property: "og:title", content: "Work — Akshar Studio" },
-      { property: "og:description", content: "Selected projects across product, brand and immersive web." },
-    ],
-  }),
-  component: () => (
+export default function Work() {
+  return (
     <div className="pt-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-xs uppercase tracking-[0.4em] text-primary">Portfolio</div>
@@ -19,5 +10,5 @@ export const Route = createFileRoute("/work")({
       </div>
       <Projects />
     </div>
-  ),
-});
+  );
+}

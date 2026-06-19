@@ -1,17 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+
 import { Projects } from "@/components/Projects";
 
-export const Route = createFileRoute("/projects")({
-  head: () => ({
-    meta: [
-      { title: "Projects — My Portfolio" },
-      { name: "description", content: "Explore my featured projects and development work." },
-    ],
-  }),
-  component: ProjectsPage,
-});
 
-function ProjectsPage() {
+
+export default function ProjectsPage() {
   return (
     <div className="pt-32">
       <div className="mx-auto max-w-6xl px-6">

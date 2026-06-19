@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+
 import { Reveal } from "@/components/Reveal";
 import { Youtube, ExternalLink, Users, Eye, Video } from "lucide-react";
 import {
@@ -9,17 +9,9 @@ import {
 import { getYouTubeChannelStats, type YouTubeChannelStats } from "@/lib/api";
 import { useEffect, useState } from "react";
 
-export const Route = createFileRoute("/youtube")({
-  head: () => ({
-    meta: [
-      { title: "YouTube — My Video Content" },
-      { name: "description", content: "Watch my videos on YouTube." },
-    ],
-  }),
-  component: YouTubePage,
-});
 
-function YouTubePage() {
+
+export default function YouTubePage() {
   const embedUrl = `https://www.youtube.com/embed/videoseries?list=${YOUTUBE_UPLOADS_PLAYLIST_ID}`;
   const [stats, setStats] = useState<YouTubeChannelStats | null>(null);
   const [loading, setLoading] = useState(true);

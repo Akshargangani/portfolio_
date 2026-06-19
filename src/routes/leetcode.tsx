@@ -1,21 +1,13 @@
-import { createFileRoute } from "@tanstack/react-router";
+
 import { Reveal } from "@/components/Reveal";
 import { Code2, Trophy, Target, Zap, Loader2, ExternalLink } from "lucide-react";
 import { useState, useEffect } from "react";
 import { getLeetCodeProfile, type LeetCodeProfile, type LeetCodeSolvedProblem } from "@/lib/api";
 import { LEETCODE_PROFILE_URL, LEETCODE_USERNAME } from "@/lib/social";
 
-export const Route = createFileRoute("/leetcode")({
-  head: () => ({
-    meta: [
-      { title: "LeetCode — My Problem Solving Journey" },
-      { name: "description", content: "Track my LeetCode progress and problem-solving stats." },
-    ],
-  }),
-  component: LeetCodePage,
-});
 
-function LeetCodePage() {
+
+export default function LeetCodePage() {
   const [profile, setProfile] = useState<LeetCodeProfile | null>(null);
   const [loading, setLoading] = useState(true);
 

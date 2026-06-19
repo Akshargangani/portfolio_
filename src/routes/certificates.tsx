@@ -1,18 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
+
 import { Reveal } from "@/components/Reveal";
 import { Award, Calendar, ExternalLink, CheckCircle } from "lucide-react";
 
-export const Route = createFileRoute("/certificates")({
-  head: () => ({
-    meta: [
-      { title: "Certificates — My Achievements" },
-      { name: "description", content: "View my professional certifications and achievements." },
-    ],
-  }),
-  component: Certificates,
-});
 
-function Certificates() {
+
+export default function Certificates() {
   const certificates = [
     {
       title: "Frontend Developer React",

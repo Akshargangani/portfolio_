@@ -1,19 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
+
 import { Reveal } from "@/components/Reveal";
 import { Download, Mail, Phone, MapPin, Github, Linkedin, Youtube, ExternalLink, Code2 } from "lucide-react";
 import { YOUTUBE_CHANNEL_URL, LEETCODE_PROFILE_URL } from "@/lib/social";
 
-export const Route = createFileRoute("/resume")({
-  head: () => ({
-    meta: [
-      { title: "Resume — Akshar" },
-      { name: "description", content: "Download my resume and learn about my experience and skills." },
-    ],
-  }),
-  component: Resume,
-});
 
-function Resume() {
+
+export default function Resume() {
   const handleDownload = () => {
     // In production, this would download a PDF resume
     // For now, we'll show an alert

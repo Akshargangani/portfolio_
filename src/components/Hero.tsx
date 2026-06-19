@@ -1,7 +1,7 @@
 import { ParticleField } from "./ParticleField";
 import { TypingText } from "./TypingText";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate } from "react-router-dom";
 
 export function Hero() {
   return (

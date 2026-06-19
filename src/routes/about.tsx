@@ -1,22 +1,12 @@
-import { createFileRoute } from "@tanstack/react-router";
+
 import { Skills } from "@/components/Skills";
 import { Timeline } from "@/components/Timeline";
 import { Testimonials } from "@/components/Testimonials";
 import { Reveal } from "@/components/Reveal";
 
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About — Akshar | Full Stack Developer" },
-      { name: "description", content: "About Akshar — a passionate Full Stack Developer crafting modern, responsive web applications." },
-      { property: "og:title", content: "About — Akshar | Full Stack Developer" },
-      { property: "og:description", content: "Passionate Full Stack Developer building clean, maintainable, user-friendly web experiences." },
-    ],
-  }),
-  component: AboutPage,
-});
 
-function AboutPage() {
+
+export default function AboutPage() {
   return (
     <div className="pt-32">
       <div className="mx-auto max-w-4xl px-6 text-center">

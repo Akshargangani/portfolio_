@@ -1,20 +1,12 @@
-import { createFileRoute } from "@tanstack/react-router";
+
 import { Reveal } from "@/components/Reveal";
 import { Github, Star, GitFork, Code, Users, Loader2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { getGitHubData } from "@/lib/api";
 
-export const Route = createFileRoute("/github")({
-  head: () => ({
-    meta: [
-      { title: "GitHub — My Repositories" },
-      { name: "description", content: "Explore my GitHub repositories and open source contributions." },
-    ],
-  }),
-  component: GitHub,
-});
 
-function GitHub() {
+
+export default function GitHub() {
   const [repositories, setRepositories] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
